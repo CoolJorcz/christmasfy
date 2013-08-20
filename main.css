@@ -9,4 +9,37 @@
   */
   margin: 0 auto;  
   width: 720px;
+  position: relative;
+  padding-left: 12em;
+}
+
+
+nav {
+  border-right: 2px solid #bcc4bc;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 150px;
+  background-color: lightgray;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  border-bottom: 2px solid #bcc4bc;
+  padding: 2px 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 1em;
+}
+
+nav a:hover {
+  color: gray;
 }
