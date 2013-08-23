@@ -29,13 +29,13 @@ var implementHoliday = {
 }
 
 function Randomize(images){
-  return Math.floor(Math.random() * 3)
+  return Math.floor(Math.random() * images.length)
 }
 
 
 var christmasGif = [
-  new Christmas("square", "http://www.christmasgifs.org/artists/menard/full.gif"),
-  new Christmas("vertical", "http://www.christmasgifs.org/artists/stockdale/full.gif"),
+new Christmas("square", "http://www.christmasgifs.org/artists/menard/full.gif"),
+new Christmas("vertical", "http://www.christmasgifs.org/artists/stockdale/full.gif"),
 new Christmas("square", "http://www.christmasgifs.org/artists/dear/full.gif"),
 new Christmas("horizontal", "http://31.media.tumblr.com/bb9645bde39d7705ff13a5ffc4dd386c/tumblr_mfulpjEYoJ1rev1g5o1_500.gif"),
 new Christmas("horizontal", "http://24.media.tumblr.com/f05527c3cdaa1cdabbc7cc41e2cc9140/tumblr_mflqkpkQ8Q1r4uycao1_250.gif"),
@@ -68,15 +68,15 @@ function imageRatio(image) {
   var height;
   var images = document.getElementsByTagName('img');
   
-  // for (var i = 0; i < images.length; i ++) {
-  //   images[i].onload = function(){ 
-  //     console.log(this.width);
-  //     console.log(this.height);
-  //     width = this.width;
-  //     height = this.height;
-  //   }
+  for (var i = 0; i < images.length; i ++) {
+    images[i].onload = function(){ 
+      width = this.width;
+      height = this.height;
+    }}
 
     imageCount = images.length;
+
+    // document.getElementsByTagName('body')[0].innerHTML += letItSnow();
 
     var image = document.getElementsByTagName('img')[0];
     // for (property in image) {
@@ -84,15 +84,13 @@ function imageRatio(image) {
     // }
 
 
-  for(var i = 0; i < imageCount; i++) {
+    for(var i = 0; i < imageCount; i++) {
 
-    var ratio = imageRatio(images[i]);
-    var number = Randomize(implementHoliday[ratio]);
-    var img = implementHoliday[ratio]()[number];
-    images[i].src = img.imageurl;
-  }
-
-    // element[0].innerHTML += '<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>';
+      var ratio = imageRatio(images[i]);
+      var number = Randomize(implementHoliday[ratio]);
+      var img = implementHoliday[ratio]()[number];
+      images[i].src = img.imageurl;
+    }
 
     transformToChristmas();  
 
@@ -100,24 +98,23 @@ function imageRatio(image) {
 
 
   function transformToChristmas(){
-    $('body').append('<canvas id="canvas"></canvas>');
+    
+    // document.getElementsByTagName('body').innerHTML += '<canvas id="canvas"></canvas>'
+    
+    document.getElementsByTagName('body')[0].style.backgroundImage = 'url("http://crazy-frankenstein.com/free-wallpapers-files/christmas-santa-claus-wallpapers/santa-claus-arrived.jpg")'
+    document.getElementsByTagName('body')[0].innerHTML += '<canvas id="canvas"></canvas>'
 
-    $('body').css('background-image', 'url("santa-claus-arrived.jpg")')
-
-    $('canvas').css('display', 'block');
-    $('head').append('<audio loop="loop" autoplay="autoplay"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>').css('display', 'hidden');
+    document.getElementsByTagName('body')[0].innerHTML += '<audio loop="loop" autoplay="autoplay"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>'
+    
 
 
-
-
- 
-    var iconSource = ["<img src='/icons/bells.png'>", "<img src='/icons/candles.png'>", "<img src='/icons/candycane.png'>", 
-                      "<img src='/icons/christmas_tree.png'>", "<img src='/icons/dooffy_ikony_christmas_0008_candles.png'>", 
-                      "<img src='/icons/hat.png'>", "<img src='/icons/ipod_black_gift.png'>", "<img src='/icons/mistletoe.png'>", 
-                      "<img src='/icons/santa_clause256.png'", "<img src='/icons/sock.png'>", "<img src='/icons/tree_1.png'>", 
-                      "<img src='/icons/tree.png'>", "<img src='/icons/xmas_14.png'>", "<img src='/icons/xmas_sticker_02.png'>", 
-                      "<img src='/icons/tree_1.png'>", "<img src='/icons/tree.png'>", "<img src='/icons/xmas_14.png", "<img src='/icons/xmas_sticker_02.png'>", 
-                      "<img src='/icons/xmas_sticker_03.png'>", "<img src='/icon/xmas_sticker_07.png'>", "<img src='/icons/xmas_sticker_15.png'>"]
+    var iconSource = ["src='./icons/bells.png'>", "src='./icons/candles.png'>", "src='./icons/candycane.png'>", 
+    "src='./icons/christmas_tree.png'>", "src='./icons/dooffy_ikony_christmas_0008_candles.png'>", 
+    "src='./icons/hat.png'>", "src='./icons/ipod_black_gift.png'>", "src='./icons/mistletoe.png'>", 
+    "src='./icons/santa_clause256.png'", "src='./icons/sock.png'>", "src='./icons/tree_1.png'>", 
+    "src='./icons/tree.png'>", "src='./icons/xmas_14.png'>", "src='./icons/xmas_sticker_02.png'>", 
+    "src='./icons/tree_1.png'>", "src='./icons/tree.png'>", "src='./icons/xmas_14.png'>", "src='./icons/xmas_sticker_02.png'>", 
+    "src='./icons/xmas_sticker_03.png'>", "src='./icons/xmas_sticker_15.png'>"]
 
     function Randomer(iconSource){
       return Math.floor(Math.random() * iconSource.length);
@@ -127,13 +124,20 @@ function imageRatio(image) {
       return iconSource[Randomer(iconSource)];
     }
 
-    console.log(getRandomIcon);
 
-    $('body').on("click", function(event){
-      event.stopPropagation();
+    document.getElementsByTagName('body')[0].addEventListener("click", function(e) {
+      
+      e.preventDefault();
+
+      var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ e.y + 'px;left:' + e.x +'px" '+ getRandomIcon(iconSource);
 
       
+      document.getElementsByTagName('body')[0].innerHTML += imageTag
 
     });
+
+
   }
 
+
+  
