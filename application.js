@@ -102,7 +102,7 @@ function imageRatio(image) {
   function transformToChristmas(){
     $('body').append('<canvas id="canvas"></canvas>');
 
-    $('body').css('background', 'green');
+    $('body').css('background-image', 'url("santa-claus-arrived.jpg")')
 
     $('canvas').css('display', 'block');
     $('head').append('<audio loop="loop" autoplay="autoplay"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>').css('display', 'hidden');
@@ -132,7 +132,7 @@ function imageRatio(image) {
     $('body').on("click", function(event){
       event.stopPropagation();
 
-      $(window.location).find('p:inner-text').attr(getRandomIcon);
+      
 
     });
   }
