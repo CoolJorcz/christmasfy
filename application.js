@@ -74,7 +74,7 @@
         width = this.width;
         height = this.height;
       }}
-
+      
       imageCount = images.length;
 
       // document.getElementsByTagName('body')[0].innerHTML += letItSnow();
@@ -104,8 +104,8 @@
       
       document.getElementsByTagName('body')[0].style.backgroundImage = 'url("http://crazy-frankenstein.com/free-wallpapers-files/christmas-santa-claus-wallpapers/santa-claus-arrived.jpg")'
       document.getElementsByTagName('body')[0].innerHTML += '<canvas id="canvas"></canvas>'
-
-      document.getElementsByTagName('body')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>'
+      
+      document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>'
       
 
 
