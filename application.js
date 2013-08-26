@@ -105,7 +105,7 @@
       document.getElementsByTagName('body')[0].style.backgroundImage = 'url("http://crazy-frankenstein.com/free-wallpapers-files/christmas-santa-claus-wallpapers/santa-claus-arrived.jpg")'
       document.getElementsByTagName('body')[0].innerHTML += '<canvas id="canvas"></canvas>'
       
-      document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="All I Want For Christmas Is You_MIDI.mp3"/></audio>'
+      document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="http://www.merry-christmas.com/christmas-music/music_files/twelv.mp3"/></audio>'
       
 
 
