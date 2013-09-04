@@ -3,7 +3,6 @@
     this.imageurl = imageurl;
   }
 
-
   var implementHoliday = {
     init: function(christmasGif){
       this.christmasGif = christmasGif;
@@ -32,7 +31,6 @@
     return Math.floor(Math.random() * images.length)
   }
 
-
   var christmasGif = [
     new Christmas("square", "http://www.christmasgifs.org/artists/menard/full.gif"),
     new Christmas("vertical", "http://www.christmasgifs.org/artists/stockdale/full.gif"),
@@ -58,9 +56,6 @@
     }
   }
 
-
-
-
   (function (document){
 
     implementHoliday.init(christmasGif);
@@ -77,13 +72,7 @@
       
       imageCount = images.length;
 
-      // document.getElementsByTagName('body')[0].innerHTML += letItSnow();
-
       var image = document.getElementsByTagName('img')[0];
-      // for (property in image) {
-      //   console.log(property + ": " + image[property]);
-      // }
-
 
       for(var i = 0; i < imageCount; i++) {
 
@@ -97,17 +86,11 @@
 
     })(document);
 
-
     function transformToChristmas(){
-      
-      // document.getElementsByTagName('body').innerHTML += '<canvas id="canvas"></canvas>'
       
       document.getElementsByTagName('body')[0].style.backgroundImage = 'url("http://crazy-frankenstein.com/free-wallpapers-files/christmas-santa-claus-wallpapers/santa-claus-arrived.jpg")'
       document.getElementsByTagName('body')[0].innerHTML += '<canvas id="canvas"></canvas>'
-      
       document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="http://www.merry-christmas.com/christmas-music/music_files/twelv.mp3"/></audio>'
-      
-
 
       var iconSource = ["src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Stocking-icon.png'>", 
       "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Present-3-icon.png'>", 
@@ -130,19 +113,14 @@
         return iconSource[Randomer(iconSource)];
       }
 
-
-      document.getElementsByTagName('body')[0].addEventListener("click", function(e) {
+      window.addEventListener("click", function(e) {
         
-        e.preventDefault();
+        e.stopPropagation();
 
         var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ e.y + 'px;left:' + e.x +'px" '+ getRandomIcon(iconSource);
 
-        
         document.getElementsByTagName('body')[0].innerHTML += imageTag
-
       });
-
-
     }
 
 
