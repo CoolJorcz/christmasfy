@@ -15,9 +15,32 @@ body {
 	font-family: "Croissant One";
 	color: rgb(250, 240, 240);
 	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.2)
 }
-.top-half h1 {
+
+
+button {
+	padding: 1em .5em;
+	border-radius: 10px;
+	background-image: url('https://dl-web.dropbox.com/get/DBC/candy_cane_stripes_gift_wrap.jpg?w=AADKW9xc3m7F16mRtj6iFbzO54ZKp4fyHkWZzcLt7P4Ecw');
+	opacity: .5;
 }
+button:hover {
+	padding: 1em .5em;
+	border-radius: 10px;
+	background-image: url('https://dl-web.dropbox.com/get/DBC/candy_cane_stripes_gift_wrap.jpg?w=AADKW9xc3m7F16mRtj6iFbzO54ZKp4fyHkWZzcLt7P4Ecw');
+	opacity: 1;
+}
+
+button a {
+	text-decoration: none;
+	color: #003200;
+	font-family: "Holly";
+	font-weight: bolder;
+	font-size: 3em;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.3)
+}
+
 .trees {
 	position: absolute;
 	top: 50%;
