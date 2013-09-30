@@ -23,7 +23,7 @@ button {
 	padding: 1em .5em;
 	border-radius: 10px;
 	background-image: url('https://dl-web.dropbox.com/get/DBC/candy_cane_stripes_gift_wrap.jpg?w=AADKW9xc3m7F16mRtj6iFbzO54ZKp4fyHkWZzcLt7P4Ecw');
-	opacity: .5;
+	opacity: .7;
 }
 button:hover {
 	padding: 1em .5em;
@@ -36,9 +36,8 @@ button a {
 	text-decoration: none;
 	color: #003200;
 	font-family: "Holly";
-	font-weight: bolder;
 	font-size: 3em;
-	text-shadow: 0 1px 3px rgba(0,0,0,0.3)
+	text-shadow: 0 1px 3px rgba(0,0,0,0.7)
 }
 
 .trees {
@@ -46,7 +45,7 @@ button a {
 	top: 50%;
 	height: 100px;
 	width: 100%;
-	margin-top: 47px;
+	margin-top: 50px;
 	background-image: url('https://dl-web.dropbox.com/get/DBC/tree.png?w=AABm9-oYSbwj4JHrUF1I2Lz9ix-7yflcGeqs-F38n3MTAQ');
 	background-size:80px 80px;
 	background-repeat: repeat-x;
@@ -72,5 +71,5 @@ button a {
 .bottom-half {
 	height: 60%;
 	background-color: white;
-	overflow: scroll;
+	clear: both;
 }
