@@ -1,0 +1,77 @@
+@import url(http://fonts.googleapis.com/css?family=Croissant+One);
+
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+body {
+	background-color: #3399FF;
+}
+.top-half {
+	height: 63%;
+	width: 100%;
+	font-family: "Croissant One";
+	color: rgb(250, 240, 240);
+	text-align: center;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.2)
+}
+
+button {
+	padding: 1em .5em;
+	border-radius: 10px;
+	background-image: url('https://dl-web.dropbox.com/get/DBC/candy_cane_stripes_gift_wrap.jpg?w=AADKW9xc3m7F16mRtj6iFbzO54ZKp4fyHkWZzcLt7P4Ecw');
+	opacity: .7;
+}
+button:hover {
+	padding: 1em .5em;
+	border-radius: 10px;
+	background-image: url('https://dl-web.dropbox.com/get/DBC/candy_cane_stripes_gift_wrap.jpg?w=AADKW9xc3m7F16mRtj6iFbzO54ZKp4fyHkWZzcLt7P4Ecw');
+	opacity: 1;
+}
+
+button a {
+	text-decoration: none;
+	color: #003200;
+	font-family: "Holly";
+	font-size: 3em;
+	text-shadow: 0 1px 3px rgba(0,0,0,0.7)
+}
+
+.trees {
+	position: absolute;
+	top: 50%;
+	height: 100px;
+	width: 100%;
+	margin-top: 50px;
+	background-image: url('https://dl-web.dropbox.com/get/DBC/tree.png?w=AABm9-oYSbwj4JHrUF1I2Lz9ix-7yflcGeqs-F38n3MTAQ');
+	background-size:80px 80px;
+	background-repeat: repeat-x;
+}
+
+#snowglobe {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+}
+
+#snowglobe .flake {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	color: rgba(255,255,255,0);
+  text-shadow: 0 0 3px rgba(255,255,255,1);
+}
+
+.bottom-half {
+	height: 60%;
+	background-color: white;
+	clear: both;
+}
+.white-gap {
+	background-color: white;
+}
