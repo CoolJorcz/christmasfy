@@ -40,12 +40,12 @@ var currentFlake = 0;
 var snowglobe = document.getElementById("snowglobe");
 
 while (currentFlake < flakeCount) {
-	var flake = document.createElement("a");
+	var flake = document.createElement("div");
 	flake.className = 'flake';
 	flake.style.fontSize = getRandom(12, 24) + 'px';
 	flake.style.top = getRandom(0, height) + 'px';
 	flake.style.left = getRandom(0, width) + 'px';
-	flake.innerHTML = "•"
+	flake.innerHTML = "*";
 	newFlake = snowglobe.appendChild(flake);
 	newFlake.speed = getRandom(1, 100);
 	flakes.push(newFlake);
