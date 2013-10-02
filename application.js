@@ -1,3 +1,4 @@
+
 function letItSnow(){
   //source: http://sutherlandboswell.com/2012/11/creating-pretty-snow-with-javascript-html-css/
 
@@ -42,6 +43,12 @@ function letItSnow(){
   var divs = document.getElementsByTagName('div');
   var bd = document.getElementsByTagName('body')[0];
   dv.setAttribute('id', 'snowglobe');
+  dv.style.width = '100%';
+  dv.style.height = '100%';
+  dv.style.position = 'relative';
+  dv.style.top = '0';
+  dv.style.left = '0';
+  dv.style.overflow = 'hidden';
 
   for(var i = 0; i < divs.length; i++)
   {
@@ -50,14 +57,18 @@ function letItSnow(){
 
   bd.appendChild(dv);
   var snowglobe = document.getElementById("snowglobe");
-
+  
   while (currentFlake < flakeCount) {
     var flake = document.createElement("div");
     flake.className = 'flake';
+    flake.style.position = 'absolute';
+    flake.style.width = '1px';
+    flake.style.height = '1px';
+    flake.style.color = 'rgba(255,255,255,0)';
+    flake.style.textShadow = '0 0 3px rgba(255,255,255,1)';
     flake.style.fontSize = getRandom(12, 24) + 'px';
     flake.style.top = getRandom(0, height) + 'px';
     flake.style.left = getRandom(0, width) + 'px';
-    flake.style.zIndex = '2px';
     flake.innerHTML = "*";
     newFlake = snowglobe.appendChild(flake);
     newFlake.speed = getRandom(1, 100);
@@ -152,7 +163,8 @@ function letItSnow(){
   }
 
   (function (document){
-    
+    transformToChristmas();  
+    letItSnow();
     implementHoliday.init(christmasGif);
 
     var width;
@@ -178,8 +190,6 @@ function letItSnow(){
           chrismages[i].src = img.imageurl;  
         }
       }
-      transformToChristmas();  
-      letItSnow();
     })(document);
 
     function transformToChristmas(){
@@ -216,6 +226,7 @@ function letItSnow(){
         var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ e.y + 'px;left:' + e.x +'px" '+ getRandomIcon(iconSource);
 
         document.getElementsByTagName('body')[0].innerHTML += imageTag
+        letItSnow();
       });
     }
 
