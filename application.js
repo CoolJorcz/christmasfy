@@ -72,7 +72,7 @@ function letItSnow(){
     flake.style.fontSize = getRandom(12, 24) + 'px';
     flake.style.top = getRandom(0, height) + 'px';
     flake.style.left = getRandom(0, width) + 'px';
-    flake.innerHTML = ".";
+    flake.innerHTML = "•";
     newFlake = snowglobe.appendChild(flake);
     newFlake.speed = getRandom(1, 100);
     flakes.push(newFlake);
@@ -173,7 +173,7 @@ function letItSnow(){
 
     var width;
     var height;
-    var chrismages = document.getElementsByTagName('img')
+    var chrismages = document.getElementsByTagName('img');
 
     imageCount = chrismages.length;
     for (var i = 0; i < chrismages.length; i ++) {
