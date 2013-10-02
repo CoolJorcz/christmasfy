@@ -1,4 +1,23 @@
 
+function setBody(){
+  var dv = document.createElement("div");
+  var divs = document.getElementsByTagName('div');
+  var bd = document.getElementsByTagName('body')[0];
+  dv.setAttribute('id', 'snowglobe');
+  dv.style.width = '100%';
+  dv.style.height = '100%';
+  dv.style.position = 'relative';
+  dv.style.top = '0';
+  dv.style.left = '0';
+  dv.style.overflow = 'hidden';
+
+  for(var i = 0; i < divs.length; i++)
+  {
+    dv.appendChild(divs[i]);
+  }
+
+  bd.appendChild(dv);
+}
 function letItSnow(){
   //source: http://sutherlandboswell.com/2012/11/creating-pretty-snow-with-javascript-html-css/
 
@@ -39,23 +58,7 @@ function letItSnow(){
   var flakes = [];
 
   var currentFlake = 0;
-  var dv = document.createElement("div");
-  var divs = document.getElementsByTagName('div');
-  var bd = document.getElementsByTagName('body')[0];
-  dv.setAttribute('id', 'snowglobe');
-  dv.style.width = '100%';
-  dv.style.height = '100%';
-  dv.style.position = 'relative';
-  dv.style.top = '0';
-  dv.style.left = '0';
-  dv.style.overflow = 'hidden';
 
-  for(var i = 0; i < divs.length; i++)
-  {
-    dv.appendChild(divs[i]);
-  }
-
-  bd.appendChild(dv);
   var snowglobe = document.getElementById("snowglobe");
   
   while (currentFlake < flakeCount) {
@@ -64,12 +67,12 @@ function letItSnow(){
     flake.style.position = 'absolute';
     flake.style.width = '1px';
     flake.style.height = '1px';
-    flake.style.color = 'rgba(255,255,255,0)';
+    flake.style.color = '#99C8FE';
     flake.style.textShadow = '0 0 3px rgba(255,255,255,1)';
     flake.style.fontSize = getRandom(12, 24) + 'px';
     flake.style.top = getRandom(0, height) + 'px';
     flake.style.left = getRandom(0, width) + 'px';
-    flake.innerHTML = "*";
+    flake.innerHTML = ".";
     newFlake = snowglobe.appendChild(flake);
     newFlake.speed = getRandom(1, 100);
     flakes.push(newFlake);
@@ -163,6 +166,7 @@ function letItSnow(){
   }
 
   (function (document){
+    setBody();
     transformToChristmas();  
     letItSnow();
     implementHoliday.init(christmasGif);
