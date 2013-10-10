@@ -72,7 +72,7 @@ function letItSnow(){
     flake.style.fontSize = getRandom(12, 24) + 'px';
     flake.style.top = getRandom(0, height) + 'px';
     flake.style.left = getRandom(0, width) + 'px';
-    flake.innerHTML = ".";
+    flake.innerHTML = "•";
     newFlake = snowglobe.appendChild(flake);
     newFlake.speed = getRandom(1, 100);
     flakes.push(newFlake);
@@ -141,15 +141,14 @@ function letItSnow(){
   }
 
   var christmasGif = [
-    new Christmas("square", "http://www.christmasgifs.org/artists/menard/full.gif"),
-    new Christmas("vertical", "http://www.christmasgifs.org/artists/stockdale/full.gif"),
-    new Christmas("horizontal", "http://www.christmasgifs.org/artists/dear/full.gif"),
-    new Christmas("horizontal", "http://31.media.tumblr.com/bb9645bde39d7705ff13a5ffc4dd386c/tumblr_mfulpjEYoJ1rev1g5o1_500.gif"),
-    new Christmas("horizontal", "http://24.media.tumblr.com/f05527c3cdaa1cdabbc7cc41e2cc9140/tumblr_mflqkpkQ8Q1r4uycao1_250.gif"),
-    new Christmas("horizontal", "http://24.media.tumblr.com/623f269461eaa6c7ecf56ae3d74ee0d3/tumblr_mfiui7EfBq1qck7l0o1_r1_500.gif"),
-    new Christmas("horizontal", "http://24.media.tumblr.com/8c19d8f533db5ebb433f9b9834b4c861/tumblr_mfgzzsWLIU1rmk138o1_400.gif"),
-    new Christmas("horizontal", "http://31.media.tumblr.com/425ae242c2b1c258c8de8d0802c5aa9e/tumblr_mfkqlcMpS51r5ge8lo8_250.gif"),
-    new Christmas("horizontal", "http://media3.giphy.com/media/4txbdOMP0CdP2/giphy.gif")
+    new Christmas("vertical", "https://s3-us-west-2.amazonaws.com/christmasfy/vertical1.gif"),
+    new Christmas("horizontal", "https://s3-us-west-2.amazonaws.com/christmasfy/horizontal2.gif"),
+    new Christmas("horizontal", "https://s3-us-west-2.amazonaws.com/christmasfy/horizontal1.gif"),
+    new Christmas("horizontal", "https://s3-us-west-2.amazonaws.com/christmasfy/horizontal3.gif"),
+    new Christmas("horizontal", "https://s3-us-west-2.amazonaws.com/christmasfy/horizontal4.gif"),
+    new Christmas("square", "https://s3-us-west-2.amazonaws.com/christmasfy/square3.gif"),
+    new Christmas("square", "https://s3-us-west-2.amazonaws.com/christmasfy/square2.gif"),
+    new Christmas("square", "https://s3-us-west-2.amazonaws.com/christmasfy/square4.gif"),
   ]
 
   function imageRatio(image) {
@@ -198,22 +197,22 @@ function letItSnow(){
 
     function transformToChristmas(){
       
-      document.getElementsByTagName('body')[0].style.backgroundImage = 'url("http://crazy-frankenstein.com/free-wallpapers-files/christmas-santa-claus-wallpapers/santa-claus-arrived.jpg")'
-      document.getElementsByTagName('body')[0].innerHTML += '<canvas id="canvas"></canvas>'
-      document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="http://www.merry-christmas.com/christmas-music/music_files/twelv.mp3"/></audio>'
+      document.getElementsByTagName('body')[0].style.backgroundImage = 'url("https://s3-us-west-2.amazonaws.com/christmasfy/santa-claus-arrived.jpg")'
+      document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="https://s3-us-west-2.amazonaws.com/christmasfy/twelv.mp3"/></audio>'
 
-      var iconSource = ["src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Stocking-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Present-3-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Snowman-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Present-2-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Present-4-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Tree-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Santa-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Present-1-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Ornament-3-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Ornament-2-icon.png>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Ornament-1-icon.png'>", 
-      "src='http://icons.iconarchive.com/icons/instatuts/christmas-theme/256/Christmas-Letter-icon.png'>"]
+      var iconSource = ["src='https://s3-us-west-2.amazonaws.com/christmasfy/xmas_14.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/xmas_sticker_02.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/xmas_sticker_03.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/xmas_sticker_07.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/xmas_sticker_15.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/sock.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/santa_claus256.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/mistletoe.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/ipod_black_gift.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/dooffy_ikony_christmas_0008_candles.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/christmas_tree.png'>", 
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/candles.png'>",
+      "src='https://s3-us-west-2.amazonaws.com/christmasfy/bells.png'>"]
 
       function Randomer(iconSource){
         return Math.floor(Math.random() * iconSource.length);
