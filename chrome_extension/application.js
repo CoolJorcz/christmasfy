@@ -166,7 +166,6 @@ function letItSnow(){
 
   var christmasfy = function christmasfy(){
 
-    setBody();
     letItSnow();
     implementHoliday.init(christmasGif);
 
@@ -233,6 +232,7 @@ function letItSnow(){
     }
 
   $(document).ready(function(){
+    setBody();
     transformToChristmas();  
     $(window).scroll(function(){
       clearTimeout($.data(this, 'scrollTimer'));
