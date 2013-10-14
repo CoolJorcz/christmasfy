@@ -164,9 +164,8 @@ function letItSnow(){
     }
   }
 
-  (function (document){
-    setBody();
-    transformToChristmas();  
+  var christmasfy = function christmasfy(){
+
     letItSnow();
     implementHoliday.init(christmasGif);
 
@@ -179,9 +178,8 @@ function letItSnow(){
       chrismages[i].onload = function(){ 
         width = this.width;
         height = this.height;
-    }}
-      
-
+      }
+    }
       var image = document.getElementsByTagName('img')[0];
 
       for(var i = 0; i < imageCount; i++) {
@@ -190,10 +188,10 @@ function letItSnow(){
           var ratio = imageRatio(image);
           var number = Randomize(implementHoliday[ratio]);
           var img = implementHoliday[ratio]()[number];
-          chrismages[i].src = img.imageurl;  
+          image.src = img.imageurl;  
         }
       }
-    })(document);
+    }
 
     function transformToChristmas(){
       
@@ -233,6 +231,16 @@ function letItSnow(){
       });
     }
 
-
+  $(document).ready(function(){
+    setBody();
+    transformToChristmas();  
+    $(window).scroll(function(){
+      clearTimeout($.data(this, 'scrollTimer'));
+      $.data(this, 'scrollTimer', setTimeout(function() {
+          christmasfy();
+      }, 250));
+    });
+    christmasfy();
+});
 
   
