@@ -188,7 +188,7 @@ function letItSnow(){
           var ratio = imageRatio(image);
           var number = Randomize(implementHoliday[ratio]);
           var img = implementHoliday[ratio]()[number];
-          chrismages[i].src = img.imageurl;  
+          image.src = img.imageurl;  
         }
       }
     }
