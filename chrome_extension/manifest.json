@@ -19,7 +19,7 @@
     "activeTab"
   ],
   "background": {
-    "scripts": ["background.js", "application.js"],
+    "scripts": ["background.js", "minify.js"],
     "persistent": false
   },
   "manifest_version": 2
