@@ -1,6 +1,6 @@
 {
   "name": "Christmasfy",
-  "version": "0.0.0.1",
+  "version": "0.0.0.4",
   "homepage_url": "http://xmasfy.us/",
   "description": "Transform any website to bring Christmas to you instantly with click events, picture replacement, and music.",
   "icons": { "16"  : "img/hat_16.png",
@@ -15,7 +15,7 @@
     "activeTab"
   ],
   "background": {
-    "scripts": ["background.js", "minify.js"],
+    "scripts": ["eventPage.js"],
     "persistent": false
   },
   "manifest_version": 2
