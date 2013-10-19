@@ -173,8 +173,6 @@ function letItSnow(){
   }
 
   var christmasfy = function christmasfy(){
-
-    letItSnow();
     implementHoliday.init(christmasGif);
 
     var width;
@@ -192,7 +190,7 @@ function letItSnow(){
 
       for(var i = 0; i < imageCount; i++) {
         var image = chrismages[i]
-        if(image.attributes['src']) {
+        if(image.attributes['src'] && chrismages[i].src.search('christmasfy') === -1) {
           var ratio = imageRatio(image);
           var number = Randomize(implementHoliday[ratio]);
           var img = implementHoliday[ratio]()[number];
@@ -202,7 +200,7 @@ function letItSnow(){
     }
 
     function transformToChristmas(){
-      
+
       document.getElementsByTagName('body')[0].style.backgroundImage = 'url("https://s3-us-west-2.amazonaws.com/christmasfy/santa-claus-arrived.jpg")'
       document.getElementsByTagName('head')[0].innerHTML += '<audio loop="loop" autoplay="autoplay" controls="hidden"><source src="https://s3-us-west-2.amazonaws.com/christmasfy/twelv.mp3"/></audio>'
 
@@ -229,10 +227,9 @@ function letItSnow(){
       }
 
       window.addEventListener("click", function(e) {
-        
         e.stopPropagation();
 
-        var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ e.y + 'px;left:' + e.x +'px" '+ getRandomIcon(iconSource);
+        var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ (e.y - 50) +  'px;left:' + (e.x - 60) +'px" '+ getRandomIcon(iconSource);
 
         document.getElementsByTagName('body')[0].innerHTML += imageTag
         letItSnow();
@@ -242,6 +239,7 @@ function letItSnow(){
   $(document).ready(function(){
     setBody();
     transformToChristmas();  
+    letItSnow();
     $(window).scroll(function(){
       clearTimeout($.data(this, 'scrollTimer'));
       $.data(this, 'scrollTimer', setTimeout(function() {
