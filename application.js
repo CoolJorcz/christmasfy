@@ -3,6 +3,7 @@ function setBody(){
   var dv = document.createElement("div");
   var divs = document.getElementsByTagName('div');
   var bd = document.getElementsByTagName('body')[0];
+  
   dv.setAttribute('id', 'snowglobe');
   dv.style.width = '100%';
   dv.style.height = '100%';
