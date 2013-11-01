@@ -226,10 +226,13 @@ function letItSnow(){
         return iconSource[Randomer(iconSource)];
       }
 
+
       window.addEventListener("click", function(e) {
         e.stopPropagation();
 
-        var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ (e.y - 50) +  'px;left:' + (e.x - 60) +'px" '+ getRandomIcon(iconSource);
+        var w = $(window);
+
+        var imageTag = '<img class="christmas" style="position:absolute;z-index:10;top:'+ (e.y - w.scrollTop() - 50) +  'px;left:' + (e.x - w.scrollLeft() - 60) +'px" '+ getRandomIcon(iconSource);
 
         document.getElementsByTagName('body')[0].innerHTML += imageTag
         letItSnow();
