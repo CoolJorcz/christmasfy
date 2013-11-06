@@ -1,6 +1,7 @@
 {
   "name": "Christmasfy",
-  "version": "1.0",
+  "short_name": "Christmasfy",
+  "version": "1.1",
   "homepage_url": "http://xmasfy.us/",
   "description": "Transform any website to bring Christmas to you instantly with click events, picture replacement, and music.",
   "icons": { "16"  : "img/hat_16.png",
