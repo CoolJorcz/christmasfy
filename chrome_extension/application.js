@@ -9,7 +9,7 @@ u[o]&&(delete u[o],c?delete n[l]:typeof n.removeAttribute!==i?n.removeAttribute(
 
 function setBody(){
   var dv = document.createElement("div");
-  var divs = document.getElementsByTagName('div');
+  var allElements = document.body.childNodes;
   var bd = document.getElementsByTagName('body')[0];
   dv.setAttribute('id', 'snowglobe');
   dv.style.width = '100%';
@@ -19,9 +19,9 @@ function setBody(){
   dv.style.left = '0';
   dv.style.overflow = 'hidden';
 
-  for(var i = 0; i < divs.length; i++)
+  for(var i = 0; i < allElements.length; i++)
   {
-    dv.appendChild(divs[i]);
+    dv.appendChild(allElements[i]);
   }
 
   bd.appendChild(dv);
