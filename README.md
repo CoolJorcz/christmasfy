@@ -3,7 +3,7 @@ Christmasfy
 
 Update any website to bring Christmas to you instantly
 
-https://chrome.google.com/webstore/detail/christmasfy/aaddgodckkibehbkcmfklgbkdhhkhpkb
+https://chrome.google.com/webstore/detail/christmasfy/iklogohmoaekfllapinmjiaidagdadkm
 
 UPDATES 11/6:
 
