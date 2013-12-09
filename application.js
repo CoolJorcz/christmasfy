@@ -1,4 +1,3 @@
-
 function setBody(){
   var dv = document.createElement("div");
   var divs = document.getElementsByTagName('div');
@@ -231,6 +230,10 @@ function letItSnow(){
         console.log(imageTag)
         document.getElementsByTagName('body')[0].innerHTML += imageTag
         letItSnow();
+      });
+      
+      $('a').click(function(event){
+        event.preventDefault();
       });
     }
 
